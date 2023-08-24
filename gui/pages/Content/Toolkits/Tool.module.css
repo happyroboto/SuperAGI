@@ -177,12 +177,12 @@
 }
 
 .feed_title {
-    font-family: 'Source Code Pro';
+    /* font-family: 'Source Code Pro'; */
     margin-left: 10px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
     color: white;
     white-space: pre-line;
     word-wrap: break-word;

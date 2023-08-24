@@ -410,7 +410,7 @@ export default function Content({env, selectedView, selectedProjectId, organisat
             </div>
           </div>
           <div className={styles.tab_detail}
-               style={tabs.length > 0 ? {backgroundColor: '#2F2C40', overflowX: 'hidden'} : {}}>
+               style={tabs.length > 0 ? {backgroundColor: '#000000', overflowX: 'hidden'} : {}}>
             <div style={{padding: '0 5px 5px 5px'}}>
               {tabs.map((tab, index) => (
                 <div key={index}>

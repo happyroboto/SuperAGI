@@ -5,6 +5,7 @@ import Image from "next/image";
 import {loadingTextEffect, formatTimeDifference} from "@/utils/utils";
 import {EventBus} from "@/utils/eventBus";
 import {ClipLoader} from 'react-spinners';
+import DOMPurify from "dompurify";
 
 export default function ActivityFeed({selectedRunId, selectedView, setFetchedData, agent}) {
   const [loadingText, setLoadingText] = useState("Thinking");
@@ -127,7 +128,7 @@ export default function ActivityFeed({selectedRunId, selectedView, setFetchedDat
                 {f.role === 'user' && <div className={styles.feed_icon}>💁</div>}
                 {f.role === 'system' && <div className={styles.feed_icon}>🛠️ </div>}
                 {f.role === 'assistant' && <div className={styles.feed_icon}>💡</div>}
-                <div className={styles.feed_title}>{f?.feed || ''}</div>
+                <div className={styles.feed_title} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(f?.feed || '') }}></div>
               </div>
               <div className={styles.more_details_wrapper}>
                 {f.time_difference && <div className={styles.more_details}>
