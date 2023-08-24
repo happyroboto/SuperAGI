@@ -446,7 +446,7 @@ export default function AgentWorkspace({env, agentId, agentName, selectedView, a
             <div className={styles.detail_content}><TaskQueue selectedRunId={selectedRun?.id || 0}/></div>}
         </div>
       </div>
-      <div style={{width: '40%'}}>
+      <div style={{width: '20%'}}>
         <div className={styles.detail_top}>
           <div style={{display: 'flex', overflowX: 'scroll'}}>
             {agentDetails && ((fetchedData && fetchedData.length > 0) || agentDetails.permission_type === 'RESTRICTED') && <div>
