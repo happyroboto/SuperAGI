@@ -5,7 +5,7 @@ import Image from "next/image";
 import {loadingTextEffect, formatTimeDifference} from "@/utils/utils";
 import {EventBus} from "@/utils/eventBus";
 import {ClipLoader} from 'react-spinners';
-import * as marked from 'marked';
+import {marked} from 'marked';
 
 export default function ActivityFeed({selectedRunId, selectedView, setFetchedData, agent}) {
   const [loadingText, setLoadingText] = useState("Thinking");

@@ -27,15 +27,15 @@ def parse_feed(feed):
 
             final_output = ""
             if "reasoning" in parsed["thoughts"]:
-                final_output = "#### Thoughts\n" + parsed["thoughts"]["reasoning"] + "\n"
+                final_output = "##### Thoughts\n" + parsed["thoughts"]["reasoning"] + "\n"
             if "plan" in parsed["thoughts"]:
-                final_output += "#### Plan\n" + str(parsed["thoughts"]["plan"]) + "\n"
+                final_output += "##### Plan\n" + str(parsed["thoughts"]["plan"]) + "\n"
             if "criticism" in parsed["thoughts"]:
-                final_output += "#### Criticism\n" + parsed["thoughts"]["criticism"] + "\n"
+                final_output += "##### Criticism\n" + parsed["thoughts"]["criticism"] + "\n"
             if "tool" in parsed:
-                final_output += "#### Tool\n" + parsed["tool"]["name"] + "\n"
+                final_output += "##### Tool\n" + parsed["tool"]["name"] + "\n"
             if "command" in parsed:
-                final_output += "#### Command\n" + parsed["command"]["name"] + "\n"
+                final_output += "##### Command\n" + parsed["command"]["name"] + "\n"
 
             return {"role": "assistant", "feed": final_output, "updated_at": feed.updated_at,
                     "time_difference": feed.time_difference}

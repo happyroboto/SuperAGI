@@ -212,6 +212,11 @@
     max-width: 95%;
 }
 
+.feed_title pre {
+    background-color: black;
+    border-radius: 5px;
+}
+
 .feed_icon {
     font-size: 20px;
     margin-top: 5px;
